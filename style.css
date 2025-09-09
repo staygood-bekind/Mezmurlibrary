@@ -31,13 +31,13 @@ a:hover { text-decoration: underline; }
 
 /* Slideshow */
 .slideshow {
-  max-width: 1000px;
-  width: min(92vw, 1000px);
-  margin: 30px auto;
+  width: 100%;              /* full width */
+  margin: 0;                /* no margins */
+  border-radius: 0;         /* remove rounding for edge-to-edge */
+  max-width: none;          /* remove max constraint */
   position: relative;
   overflow: hidden;
-  border-radius: 16px;
-  box-shadow: 0 10px 28px rgba(2,6,23,0.18);
+  box-shadow: none;         /* optional: remove shadow */
   background: #000;
 }
 .slides {
@@ -51,9 +51,8 @@ a:hover { text-decoration: underline; }
 }
 .slide img {
   width: 100%;
-  height: clamp(240px, 52vw, 540px);
+  height: 100vh;            /* make slideshow fill full viewport height */
   object-fit: cover;
-  display: block;
 }
 .caption {
   position: absolute;
