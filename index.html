@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Slideshow + Sidebar Menu</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Hamburger -->
+  <div class="hamburger" aria-label="Open menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+  <!-- Header -->
+  <div class="header">
+    <h1>Mezmur Library</h1>
+  </div>
+
+  <!-- Sidebar + Backdrop -->
+  <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+  <aside id="sidebar" class="sidebar" aria-hidden="true">
+    <h3>Sections</h3>
+    <div id="menu-container"></div>
+  </aside>
+
+  <!-- Slideshow -->
+  <div class="slideshow">
+    <div class="slides">
+      <div class="slide">
+        <img loading="lazy" data-src="https://picsum.photos/id/1015/1200/700" alt="Slide 1">
+        <div class="caption">Slide 1</div>
+      </div>
+      <div class="slide">
+        <img loading="lazy" data-src="https://picsum.photos/id/1025/1200/700" alt="Slide 2">
+        <div class="caption">Slide 2</div>
+      </div>
+      <div class="slide">
+        <img loading="lazy" data-src="https://picsum.photos/id/1035/1200/700" alt="Slide 3">
+        <div class="caption">Slide 3</div>
+      </div>
+    </div>
+    <div class="dots"></div>
+  </div>
+
+  <!-- Nav Buttons -->
+  <div class="nav-btns">
+    <button id="btn-back">⬅ Back</button>
+    <button id="btn-forward">Forward ➡</button>
+  </div>
+
+  <div class="footer">
+    © <span id="year"></span> Mezmur Library
+  </div>
+
+  <script>
+    // set year quickly without loading the big script yet (progressive enhancement)
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+  <script src="script.js"></script>
+</body>
+</html>
