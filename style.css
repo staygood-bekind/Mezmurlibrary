@@ -220,3 +220,34 @@ a:hover { text-decoration: underline; }
   border-top: 1px solid #e5e7eb;
   margin-top: 40px;
 }
+
+/* Light theme (default) */
+body[data-theme="light"] {
+  background: #f4f6fb;
+  color: #111827;
+}
+body[data-theme="light"] .header {
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+body[data-theme="light"] .hamburger span {
+  background: #fff;
+}
+
+/* Dark theme */
+body[data-theme="dark"] {
+  background: #0f172a;
+  color: #e5e7eb;
+}
+body[data-theme="dark"] .header {
+  background: #1e293b;
+  color: #f9fafb;
+}
+body[data-theme="dark"] .hamburger span {
+  background: #f9fafb;
+}
+body[data-theme="dark"] .footer {
+  color: #9ca3af;
+  border-top: 1px solid #374151;
+}
+
