@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+  <!-- Hamburger (works here too) -->
+  <div class="hamburger"><span></span><span></span><span></span></div>
+
+  <div class="header">
+    <h1>⚙ Settings</h1>
+  </div>
+
+  <main style="max-width: 600px; margin: 40px auto; padding: 0 16px;">
+    <h2>Appearance</h2>
+    <label>
+      <input type="radio" name="theme" value="light"> Light
+    </label><br>
+    <label>
+      <input type="radio" name="theme" value="dark"> Dark
+    </label>
+  </main>
+
+  <!-- Sidebar + Backdrop -->
+  <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+  <aside id="sidebar" class="sidebar">
+    <h3>Sections</h3>
+    <div id="menu-container"></div>
+    <div class="settings-link">
+      <a href="settings.html">⚙ Settings</a>
+    </div>
+  </aside>
+
+  <script src="../script.js"></script>
+  <script>
+    // Load saved theme
+    const savedTheme = localStorage.getItem("theme") || "light";
+    document.body.dataset.theme = savedTheme;
+    document.querySelector(`input[value=${savedTheme}]`).checked = true;
+
+    // Listen for theme changes
+    document.querySelectorAll("input[name=theme]").forEach(input => {
+      input.addEventListener("change", e => {
+        const theme = e.target.value;
+        document.body.dataset.theme = theme;
+        localStorage.setItem("theme", theme);
+      });
+    });
+  </script>
+</body>
+</html>
