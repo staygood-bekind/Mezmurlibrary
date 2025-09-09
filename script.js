@@ -95,6 +95,14 @@ if ('IntersectionObserver' in window) {
   });
 }
 
-/* Back/Forward buttons */
-document.getElementById('btn-back')?.addEventListener('click', () => history.back());
-document.getElementById('btn-forward')?.addEventListener('click', () => history.forward());
+// Back and Forward buttons
+document.querySelectorAll(".nav-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    if (btn.classList.contains("back-btn")) {
+      window.history.back();
+    } else if (btn.classList.contains("forward-btn")) {
+      window.history.forward();
+    }
+  });
+});
+
