@@ -221,6 +221,21 @@ a:hover { text-decoration: underline; }
   margin-top: 40px;
 }
 
+/* Setting Section */
+.settings-link {
+  padding: 14px 18px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+}
+.settings-link a {
+  color: #facc15; /* yellow-400 */
+  font-weight: 600;
+  text-decoration: none;
+}
+.settings-link a:hover {
+  color: #fde68a; /* yellow-200 */
+}
+
+
 /* Light theme (default) */
 body[data-theme="light"] {
   background: #f4f6fb;
