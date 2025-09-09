@@ -183,23 +183,30 @@ a:hover { text-decoration: underline; }
 }
 
 /* Nav Buttons */
-.nav-btns {
-  margin: 24px auto 48px;
-  text-align: center;
-}
-.nav-btns button {
-  padding: 10px 18px;
-  margin: 0 8px;
+.nav-btn {
+  padding: 12px 22px;
+  margin: 12px;
+  font-size: 16px;
   border: none;
-  border-radius: 8px;
-  background: #2563eb;
-  color: white;
+  border-radius: 30px;
   cursor: pointer;
-  transition: transform 0.02s ease, opacity 0.25s ease;
-  box-shadow: 0 6px 18px rgba(37,99,235,0.25);
+  background: linear-gradient(135deg, #4e54c8, #8f94fb);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
-.nav-btns button:hover { opacity: 0.9; }
-.nav-btns button:active { transform: translateY(1px); }
+
+.nav-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.3);
+}
+
+.nav-btn:active {
+  transform: scale(0.96);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
 
 /* Footer */
 .footer {
