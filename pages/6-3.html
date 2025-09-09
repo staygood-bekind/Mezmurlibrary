@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Section 6 - Item 3</title>
+  <link rel="stylesheet" href="../style.css" />
+</head>
+<body>
+  <!-- Hamburger (works on subpages too) -->
+  <div class="hamburger" aria-label="Open menu" role="button" tabindex="0">
+    <span></span><span></span><span></span>
+  </div>
+  <div class="header">
+    <h1>Section 6 → Item 3</h1>
+  </div>
+
+  <main style="max-width: 960px; margin: 24px auto; padding: 0 16px;">
+    <p>This is the page for <strong>Section 6</strong>, item <strong>3</strong>.</p>
+    <p>Put your content here. You can embed audio, video, or text.</p>
+    <div class="nav-btns">
+      <button id="btn-back">⬅ Back</button>
+      <button id="btn-forward">Forward ➡</button>
+      <a href="../index.html" style="margin-left:12px;">Home</a>
+    </div>
+  </main>
+
+  <!-- Sidebar + Backdrop (so menu works here too) -->
+  <div id="sidebar-backdrop" class="sidebar-backdrop"></div>
+  <aside id="sidebar" class="sidebar" aria-hidden="true">
+    <h3>Sections</h3>
+    <div id="menu-container"></div>
+  </aside>
+
+  <script src="../script.js"></script>
+</body>
+</html>
