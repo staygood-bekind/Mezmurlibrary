@@ -266,3 +266,23 @@ body[data-theme="dark"] .footer {
   border-top: 1px solid #374151;
 }
 
+/* Style the syllable+number badge like list numbers */
+#menu-container .label {
+  display: inline-block;
+  min-width: 32px;           /* makes them line up neatly */
+  text-align: center;
+  font-weight: bold;
+  font-size: 14px;
+  color: #fff;
+  background: #3b82f6;       /* blue background */
+  padding: 4px 8px;
+  border-radius: 50%;        /* makes them round like numbered badges */
+  margin-right: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  transition: background 0.2s ease;
+}
+
+#menu-container a:hover .label {
+  background: #2563eb;       /* darker blue on hover */
+}
+
